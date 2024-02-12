@@ -1,0 +1,289 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    --black-shade:rgb(45, 45, 45);
+}
+
+body{
+background-color: black;
+}
+
+
+nav{
+height: 70px;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: black;
+border: 2px white solid;
+position: relative;
+}
+
+nav>h1{
+    letter-spacing: 4px;
+    color: white;
+    position: absolute;
+    left: 45%;
+    
+  
+}
+
+nav>#cat{
+    color: white;
+    margin-right: 2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+  
+}
+
+nav>#cat>select{
+    padding: 4px 10px;
+    border: none;
+    border-radius: 8px;
+}
+/* nav>#cat>i{
+    margin-top: 2px;
+    font-size: 12px;
+    transform: rotate(90deg);
+    color: rgb(172, 172, 172);
+} */
+/* ****************************** */
+
+#cont_main{
+
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: baseline;
+    border-left:2px white solid;
+    border-right: 2px white solid;
+
+}
+
+#cont_songs{
+    border: 1px black solid;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(65, 65, 65);
+    border-right: 2px white solid;
+    padding: 0px 3px;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+     
+
+}
+
+.fa-bars{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 2rem;
+    color: rgb(216, 147, 147);
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+
+
+.d_song{
+ color: white;
+ background-color: rgb(39, 39, 39);
+ height:30px;
+ font-size: 10px;
+ align-items: center;
+position: relative;
+margin-top: 0.2rem;
+width: 100%;
+
+
+
+}
+
+
+
+.d_song>div{
+    display: flex;
+    white-space: nowrap;
+    height: 30px;
+
+
+}
+
+.d_song>div>h3{
+
+  padding: 0.3rem;
+  cursor: pointer;
+
+}
+#sn{
+    width: 10%
+    
+}
+#name{
+    width:80%;
+   
+}
+
+.d_song:hover div{
+    animation: moveRightToLeft 5s linear infinite;
+}
+
+/* ********************************************** */
+
+
+#cont_display{
+    display: flex;
+    padding: 2rem;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color:var(--black-shade);
+    position: relative;
+    
+    
+}
+
+#cont_display>img{
+    width: 80%;
+}
+#cont_display>#songName{
+    color: white;
+    /* border: 1px red solid; */
+    position: absolute;
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 2px;
+    font-size: 1.2rem;
+    /* background-color: rgba(0, 0, 0, 0.258); */
+}
+#cont_display>div{
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+#cont_display>div>input{
+    width: 100%;
+    cursor: pointer;
+}
+
+
+#cont_display>div>div{
+  display: flex;
+  gap: 2rem;
+  /* padding: 1rem; */
+  position: relative;
+
+}
+#time{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1rem;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+#cont_display>div>div>i{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+#gif{
+    border: 1px wheat solid;
+    height: 50px;
+    position: absolute;
+    top: -400%;
+    right: 0%;
+    display: none;
+}
+
+
+/* *************** Footer ********************* */
+
+
+
+
+
+/* ************** media query ***************** */
+
+@media (max-width: 600px)
+{
+    body{
+        background-color: black;
+    }
+
+    nav{
+        justify-content: center;
+        }
+
+        nav>h1{
+            letter-spacing: 3px;
+            position: static;
+        }
+
+        #cont_main{
+            justify-content: center;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 1rem;
+            padding: 0px 0.5rem;
+        
+        }
+
+        #cont_songs{
+            width: 100%;
+            padding: 0px 10px;
+            padding-top: 1rem;
+            overflow: scroll;
+            border: none;
+            overflow: auto;
+            height: 100%;
+        }
+
+        .fa-bars{
+
+            font-size: 1.6rem;
+            left: 3%;
+        }
+
+        #cont_display{
+            display: flex;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+     
+            /* box-sizing: border-box; */
+        }
+
+}
+
+/* ***************** keyFrame ****************** */
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
